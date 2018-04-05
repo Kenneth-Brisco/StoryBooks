@@ -4,6 +4,8 @@ const mongoose = require('mongoose');
 const Story = mongoose.model('stories');
 const {ensureAuthenticated, ensureGuest} = require('../helpers/auth');
 
+//routes
+
 router.get('/', ensureGuest, (req, res) => {
   res.render('index/welcome');
 });
